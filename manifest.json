@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Domain Request Logger",
+  "version": "1.0",
+  "permissions": [
+    "webRequest",
+    "activeTab",
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
